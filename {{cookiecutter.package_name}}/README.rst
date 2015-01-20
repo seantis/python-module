@@ -22,7 +22,7 @@ Conventions
 
     tox -e pep8
 
-{{ cookiecutter.package_name.split('.') | map('capitalize') | join(' ') }} uses [Semantic Versioning](http://semver.org/)
+{{ cookiecutter.package_name.split('.') | map('capitalize') | join(' ') }} uses `Semantic Versioning <http://semver.org/>`_
 
 Build Status
 ------------
