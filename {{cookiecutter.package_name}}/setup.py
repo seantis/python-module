@@ -23,7 +23,7 @@ setup(
     name=name,
     version=version,
     description=description,
-    long_description='\n'.join(get_long_description()),
+    long_description=get_long_description(),
     url='http://github.com/seantis/{{ cookiecutter.package_name }}',
     author='{{ cookiecutter.author }}',
     author_email='{{ cookiecutter.author_email }}',
