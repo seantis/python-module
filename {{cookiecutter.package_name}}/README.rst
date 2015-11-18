@@ -38,8 +38,8 @@ Coverage
   :target: https://coveralls.io/r/seantis/{{ cookiecutter.package_name }}?branch=master
   :alt: Project Coverage
 
-Latests PyPI Release
---------------------
+Latest PyPI Release
+-------------------
 
 .. image:: https://badge.fury.io/py/{{ cookiecutter.package_name }}.svg
     :target: https://badge.fury.io/py/{{ cookiecutter.package_name }}
