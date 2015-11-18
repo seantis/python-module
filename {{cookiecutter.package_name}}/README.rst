@@ -5,7 +5,7 @@
 
 Run the Tests
 -------------
-    
+
 Install tox and run it::
 
     pip install tox
@@ -40,9 +40,10 @@ Coverage
 
 Latests PyPI Release
 --------------------
-.. image:: https://pypip.in/v/{{ cookiecutter.package_name }}/badge.png
-  :target: https://crate.io/packages/{{ cookiecutter.package_name }}
-  :alt: Latest PyPI Release
+
+.. image:: https://badge.fury.io/py/{{ cookiecutter.package_name }}.svg
+    :target: https://badge.fury.io/py/{{ cookiecutter.package_name }}
+    :alt: Latest PyPI Release
 
 License
 -------
