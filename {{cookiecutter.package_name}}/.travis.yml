@@ -1,18 +1,20 @@
 language: python
 cache: pip
+python: "3.5"
 
 env:
     - TOXENV=py27
     - TOXENV=py33
     - TOXENV=py34
+    - TOXENV=py35
     - TOXENV=pep8
 install:
     - pip install tox
-    - if [ "$TOXENV" = 'py34' ]; then pip install coveralls; fi
+    - if [ "$TOXENV" = 'py35' ]; then pip install coveralls; fi
 script:
     - tox -e $TOXENV
 after_success:
-    - if [ "$TOXENV" = 'py34' ]; then coveralls; fi
+    - if [ "$TOXENV" = 'py35' ]; then coveralls; fi
 #
 # Activate this after the repository has been added to travis.
 # If enabled, travis will automatically upload eggs to pypi every time
@@ -34,5 +36,5 @@ after_success:
 #       secure: encrypted...
 #     on:
 #         tags: true
-#         condition: $TOXENV = py34
+#         condition: $TOXENV = py35
 #
