@@ -8,13 +8,19 @@
 
 To install the package locally, run the following in a virtual environment:
 
-    pip install -e '.[test]'
+    make install
+
+## Updates
+
+To install the latest dependencies, run the following:
+
+    make update
 
 ## Tests
 
-To run the tests, use `py.test`:
+To run all tests, run the following:
 
-    py.test
+    make test
 
 ## License
 

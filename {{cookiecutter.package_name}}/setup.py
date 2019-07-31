@@ -32,7 +32,11 @@ setup(
 
     ],
     extras_require=dict(
+        dev=[
+            'scrambler',
+        ],
         test=[
+            'flake8',
             'pytest',
         ],
     ),
