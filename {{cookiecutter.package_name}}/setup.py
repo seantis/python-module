@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from setuptools import setup, find_packages
+from setuptools import setup
 
 name = '{{ cookiecutter.package_name }}'
 description = (
@@ -27,7 +27,7 @@ setup(
     url='http://github.com/seantis/{{ cookiecutter.package_name }}',
     author='{{ cookiecutter.author }}',
     author_email='{{ cookiecutter.author_email }}',
-    license='GPLv2',
+    license='MIT',
     packages=['{{ cookiecutter.package_name }}'],
     namespace_packages=name.split('.')[:-1],
     include_package_data=True,
@@ -47,6 +47,6 @@ setup(
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
         'Topic :: Software Development :: Libraries :: Python Modules',
-        'License :: OSI Approved :: GNU General Public License v2 (GPLv2)',
+        'License :: OSI Approved :: MIT LIcense',
     ]
 )

@@ -47,4 +47,4 @@ Latest PyPI Release
 
 License
 -------
-{{ cookiecutter.package_name }} is released under GPLv2
+{{ cookiecutter.package_name }} is released under MIT
