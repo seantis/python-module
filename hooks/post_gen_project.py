@@ -24,8 +24,6 @@ def get_directory_name(path):
 
 def create_nested_folders(package_name, target):
 
-    declare_ns = "__import__('pkg_resources').declare_namespace(__name__)\n"
-
     # make sure to get back to the original cwd
     with switch_directory(os.getcwd()):
         parts = package_name.split('.')
@@ -36,9 +34,6 @@ def create_nested_folders(package_name, target):
             else:
                 os.mkdir(part)
                 os.chdir(part)
-
-                with open('__init__.py', 'w') as f:
-                    f.write(declare_ns)
 
 
 # create nested package folders (my.package becomes my/package)

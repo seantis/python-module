@@ -28,7 +28,7 @@ setup(
     author='{{ cookiecutter.author }}',
     author_email='{{ cookiecutter.author_email }}',
     license='GPLv2',
-    packages=find_packages(exclude=['ez_setup']),
+    packages=['{{ cookiecutter.package_name }}'],
     namespace_packages=name.split('.')[:-1],
     include_package_data=True,
     zip_safe=False,
