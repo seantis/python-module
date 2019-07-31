@@ -51,3 +51,6 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# Default virtual environment
+venv/

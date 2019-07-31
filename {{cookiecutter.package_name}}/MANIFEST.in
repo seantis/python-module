@@ -1,7 +1,6 @@
-recursive-include {{ cookiecutter.package_name.split('.')[0] }} *
-recursive-include docs *
-include *.txt
-include *.rst
+graft src/{{ cookiecutter.package_name.split('.')[0] }}
+include *.md
+
 global-exclude *.mo
 global-exclude *.pyc
 global-exclude __pycache__/*

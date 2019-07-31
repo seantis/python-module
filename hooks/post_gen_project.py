@@ -25,7 +25,7 @@ def get_directory_name(path):
 def create_nested_folders(package_name, target):
 
     # make sure to get back to the original cwd
-    with switch_directory(os.getcwd()):
+    with switch_directory(os.getcwd() + '/src'):
         parts = package_name.split('.')
 
         for ix, part in enumerate(parts):
@@ -36,11 +36,11 @@ def create_nested_folders(package_name, target):
                 os.chdir(part)
 
 
-# create nested package folders (my.package becomes my/package)
+# create nested package folders (src/my.package becomes src/my/package)
 package_name = get_directory_name(os.getcwd())
 
 if '.' in package_name:
     create_nested_folders(
         package_name=package_name,
-        target=os.path.join(os.getcwd(), package_name)
+        target=os.path.join(os.getcwd() + '/src', package_name)
     )
