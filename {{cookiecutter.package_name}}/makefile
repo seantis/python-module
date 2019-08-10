@@ -1,13 +1,14 @@
 install: in_virtual_env
-	# use latest pip
-	pip install --upgrade pip
+	@echo "✨ Upgrading pip"
+	@pip install --upgrade pip --quiet
 
-	# install requirements
-	pip install -e '.[test,dev]' --upgrade-strategy=eager
+	@echo "✨ Installing requirements"
+	@pip install -e '.[test,dev]' --upgrade-strategy=eager --quiet
 
-	# gather eggs
-	rm -rf ./eggs
-	scrambler --target eggs
+	@echo "✨ Gathering external sources in ./eggs folder"
+	@rm -rf ./eggs
+	@scrambler --target eggs 2>&1 | grep -v Skipping || true
+	@rm -rf ./eggs/{{ cookiecutter.package_name.split('.')[0] }}
 
 update: in_virtual_env
 
